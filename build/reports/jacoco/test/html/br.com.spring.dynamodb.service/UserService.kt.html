@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UserService.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">spring-with-dynamodb-reactive</a> &gt; <a href="index.source.html" class="el_package">br.com.spring.dynamodb.service</a> &gt; <span class="el_source">UserService.kt</span></div><h1>UserService.kt</h1><pre class="source lang-java linenums">package br.com.spring.dynamodb.service
+
+import br.com.spring.dynamodb.model.entity.User
+import br.com.spring.dynamodb.model.request.UserSaveRequest
+import br.com.spring.dynamodb.model.request.UserUpdateRequest
+import br.com.spring.dynamodb.model.response.UserSaveResponse
+import br.com.spring.dynamodb.repository.UserRepository
+import mu.KotlinLogging
+import org.springframework.stereotype.Service
+
+<span class="fc" id="L11">@Service</span>
+<span class="fc" id="L12">class UserService(</span>
+<span class="pc" id="L13">    val repository: UserRepository</span>
+) {
+<span class="pc" id="L15">    val logger = KotlinLogging.logger {}</span>
+
+<span class="nc" id="L17">    suspend fun saveUser(</span>
+        userSaveRequest: UserSaveRequest,
+    ): UserSaveResponse {
+<span class="nc" id="L20">        logger.info { &quot;saveUser: saving user, document: ${userSaveRequest.documentNumber}&quot; }</span>
+<span class="nc" id="L21">        val response =</span>
+<span class="nc" id="L22">            repository.save(</span>
+<span class="nc" id="L23">                User(</span>
+<span class="nc" id="L24">                    document = userSaveRequest.documentNumber,</span>
+<span class="nc" id="L25">                    lastName = userSaveRequest.lastName,</span>
+<span class="nc" id="L26">                    country = userSaveRequest.country,</span>
+<span class="nc" id="L27">                    nickName = userSaveRequest.nickName,</span>
+<span class="nc" id="L28">                    birthDate = userSaveRequest.birthDate,</span>
+<span class="nc" id="L29">                    name = userSaveRequest.name</span>
+                )
+            )
+<span class="nc" id="L32">        return response.let { UserSaveResponse(it.userId, it.document) }</span>
+<span class="nc" id="L33">            .also {</span>
+<span class="nc" id="L34">                logger.info {</span>
+<span class="nc" id="L35">                    &quot;saveUser: saved user&quot; +</span>
+<span class="nc" id="L36">                        &quot;document: ${it.document}&quot; +</span>
+<span class="nc" id="L37">                        &quot;Id: ${it.id}&quot;</span>
+                }
+<span class="nc" id="L39">            }</span>
+    }
+
+<span class="nc" id="L42">    suspend fun getUser(id: String, document: String): User {</span>
+
+<span class="nc" id="L44">        logger.info { &quot;getUser: finding user,document: $document, Id: $id&quot; }</span>
+<span class="nc" id="L45">        return repository.get(document = document, id = id)</span>
+<span class="nc" id="L46">            .also {</span>
+<span class="nc" id="L47">                logger.info {</span>
+<span class="nc" id="L48">                    &quot;getUser: find successfully for ,&quot; +</span>
+<span class="nc" id="L49">                        &quot;document: $document, Id: $id&quot;</span>
+                }
+<span class="nc" id="L51">            }</span>
+    }
+
+<span class="nc" id="L54">    suspend fun updateUser(</span>
+        userUpdateRequest: UserUpdateRequest,
+        userId: String,
+        document: String
+    ) {
+<span class="nc" id="L59">        logger.info {</span>
+<span class="nc" id="L60">            &quot;updateUser: updating to document: $document,&quot; +</span>
+<span class="nc" id="L61">                &quot; Id:$userId&quot;</span>
+        }
+
+<span class="nc" id="L64">        val entityToUpdate = repository.get(document = document, id = userId)</span>
+<span class="nc" id="L65">        val user = User(</span>
+<span class="nc" id="L66">            userId = userId,</span>
+<span class="nc" id="L67">            document = document,</span>
+<span class="nc bnc" id="L68" title="All 2 branches missed.">            nickName = userUpdateRequest.nickName ?: entityToUpdate.nickName,</span>
+<span class="nc bnc" id="L69" title="All 2 branches missed.">            country = userUpdateRequest.country ?: entityToUpdate.country,</span>
+<span class="nc bnc" id="L70" title="All 2 branches missed.">            lastName = userUpdateRequest.lastName ?: entityToUpdate.lastName,</span>
+<span class="nc bnc" id="L71" title="All 2 branches missed.">            name = userUpdateRequest.name ?: entityToUpdate.name,</span>
+<span class="nc bnc" id="L72" title="All 2 branches missed.">            birthDate = userUpdateRequest.birthDate ?: entityToUpdate.birthDate</span>
+        )
+<span class="nc" id="L74">        repository.update(user)</span>
+<span class="nc" id="L75">            .also {</span>
+<span class="nc" id="L76">                logger.info {</span>
+<span class="nc" id="L77">                    &quot;updateUser: update user with success, id: ${user.userId}&quot;</span>
+                }
+<span class="nc" id="L79">            }</span>
+<span class="nc" id="L80">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

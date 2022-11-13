@@ -1,0 +1,1 @@
+MatchingDeclarationName - [SprigWithDynamodbReactiveApplication] at /home/danilo/Workspace/spring-with-dynamodb-reactive/src/main/kotlin/br/com/spring/dynamodb/Application.kt:6:1 - Signature=Application.kt$SprigWithDynamodbReactiveApplication

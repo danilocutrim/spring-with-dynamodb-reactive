@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - SprigWithDynamodbReactiveApplicationTests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>SprigWithDynamodbReactiveApplicationTests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/br.com.spring.dynamodb.html">br.com.spring.dynamodb</a> &gt; SprigWithDynamodbReactiveApplicationTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.909s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">contextLoads()</td>
+<td class="success">0.909s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>21:01:34.695 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+21:01:34.752 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+21:01:34.896 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [br.com.spring.dynamodb.SprigWithDynamodbReactiveApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+21:01:34.950 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [br.com.spring.dynamodb.SprigWithDynamodbReactiveApplicationTests], using SpringBootContextLoader
+21:01:34.970 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [br.com.spring.dynamodb.SprigWithDynamodbReactiveApplicationTests]: class path resource [br/com/spring/dynamodb/SprigWithDynamodbReactiveApplicationTests-context.xml] does not exist
+21:01:34.973 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [br.com.spring.dynamodb.SprigWithDynamodbReactiveApplicationTests]: class path resource [br/com/spring/dynamodb/SprigWithDynamodbReactiveApplicationTestsContext.groovy] does not exist
+21:01:34.974 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [br.com.spring.dynamodb.SprigWithDynamodbReactiveApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+21:01:34.977 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [br.com.spring.dynamodb.SprigWithDynamodbReactiveApplicationTests]: SprigWithDynamodbReactiveApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:01:35.118 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [br.com.spring.dynamodb.SprigWithDynamodbReactiveApplicationTests]
+21:01:35.400 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/home/danilo/Workspace/spring-with-dynamodb-reactive/build/classes/kotlin/main/br/com/spring/dynamodb/SprigWithDynamodbReactiveApplication.class]
+21:01:35.402 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration br.com.spring.dynamodb.SprigWithDynamodbReactiveApplication for test class br.com.spring.dynamodb.SprigWithDynamodbReactiveApplicationTests
+21:01:35.710 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [br.com.spring.dynamodb.SprigWithDynamodbReactiveApplicationTests]: using defaults.
+21:01:35.712 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+21:01:35.733 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [javax/servlet/ServletContext]
+21:01:35.737 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/TransactionDefinition]
+21:01:35.738 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+21:01:35.739 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@60ed12e8, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@24c8d8be, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3290b1a6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6fcd31c3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@67bf0480, org.springframework.test.context.event.EventPublishingTestExecutionListener@5503de1, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@32faa16c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@343fddd9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2bbb44da, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2f80cb79, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4816ee24, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@20d33ea]
+21:01:35.746 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@3a401749 testClass = SprigWithDynamodbReactiveApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@7793ad58 testClass = SprigWithDynamodbReactiveApplicationTests, locations = '{}', classes = '{class br.com.spring.dynamodb.SprigWithDynamodbReactiveApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@14b7786, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@245ec1a6, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3062f9f4, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6cfd9a54, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@2a2ef072, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@29a1505c, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@324dcd31], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
+21:01:35.798 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@3a401749 testClass = SprigWithDynamodbReactiveApplicationTests, testInstance = br.com.spring.dynamodb.SprigWithDynamodbReactiveApplicationTests@c7f4457, testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@7793ad58 testClass = SprigWithDynamodbReactiveApplicationTests, locations = '{}', classes = '{class br.com.spring.dynamodb.SprigWithDynamodbReactiveApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@14b7786, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@245ec1a6, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3062f9f4, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6cfd9a54, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@2a2ef072, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@29a1505c, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@324dcd31], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]].
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.5)
+
+2022-11-12 21:01:37.656  INFO [spring-with-dynamodb,,] 28374 --- [    Test worker] prigWithDynamodbReactiveApplicationTests : Starting SprigWithDynamodbReactiveApplicationTests using Java 17.0.4.1 on danilo-home with PID 28374 (started by danilo in /home/danilo/Workspace/spring-with-dynamodb-reactive)
+2022-11-12 21:01:37.666  INFO [spring-with-dynamodb,,] 28374 --- [    Test worker] prigWithDynamodbReactiveApplicationTests : The following 1 profile is active: &quot;dev&quot;
+2022-11-12 21:01:48.464  INFO [spring-with-dynamodb,,] 28374 --- [    Test worker] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e8d8347a-f70e-37ff-a812-f3481e628791
+2022-11-12 21:01:49.657  INFO [spring-with-dynamodb,,] 28374 --- [    Test worker] b.c.s.dynamodb.config.DynamoDBConfig     : Amazon DYNAMODB running with profile = [dev]
+2022-11-12 21:01:53.062  INFO [spring-with-dynamodb,,] 28374 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-11-12 21:01:55.995  INFO [spring-with-dynamodb,,] 28374 --- [    Test worker] prigWithDynamodbReactiveApplicationTests : Started SprigWithDynamodbReactiveApplicationTests in 20.125 seconds (JVM running for 25.761)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at 12 de nov. de 2022 21:01:57</p>
+</div>
+</div>
+</body>
+</html>
