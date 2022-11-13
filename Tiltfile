@@ -1,6 +1,6 @@
 # -*- mode: Python -*-
 
-repository_name = "spring-with-dynamodb"
+repository_name = "spring-with-dynamodb-reactive"
 port = 9089
 debug_port = 5006
 application_class = 'br.com.spring.dynamodb.ApplicationKt'

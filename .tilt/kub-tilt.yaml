@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-with-dynamodb
+  name: spring-with-dynamodb-reactive
   labels:
-    app: spring-with-dynamodb
+    app: spring-with-dynamodb-reactive
 spec:
   selector:
     matchLabels:
-      app: spring-with-dynamodb
+      app: spring-with-dynamodb-reactive
   template:
     metadata:
       labels:
-        app: spring-with-dynamodb
+        app: spring-with-dynamodb-reactive
     spec:
       hostNetwork: true
       containers:
-        - name: spring-with-dynamodb
-          image: spring-with-dynamodb-image
+        - name: spring-with-dynamodb-reactive
+          image: spring-with-dynamodb-reactive-image
           env:
             - name: ENV
               value: dev

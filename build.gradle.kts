@@ -1,10 +1,4 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-val javaVersion = JavaVersion.VERSION_11
-val kotlinVersion = "1.6.10"
-val springBootVersion = "2.7.5"
-val detektVersion = "1.17.1"
-val spotlessVersion = "5.14.3"
-val springCloudVersion = "2020.0.3"
 
 buildscript {
 	dependencies {
@@ -82,4 +76,8 @@ sonarqube {
 
 tasks.withType<Test> {
 	useJUnitPlatform()
+}
+
+tasks.getByName<Jar>("jar") {
+	enabled = false
 }
