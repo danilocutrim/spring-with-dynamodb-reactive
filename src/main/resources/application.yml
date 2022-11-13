@@ -1,8 +1,6 @@
 spring:
   profiles:
     active: dev
-  config:
-    use-legacy-processing: true
   application:
     name: spring-with-dynamodb
 aws:

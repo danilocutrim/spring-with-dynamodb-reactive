@@ -5,6 +5,8 @@ import br.com.spring.dynamodb.model.request.UserSaveRequest
 import br.com.spring.dynamodb.model.request.UserUpdateRequest
 import br.com.spring.dynamodb.model.response.UserSaveResponse
 import br.com.spring.dynamodb.service.UserService
+import jakarta.validation.Valid
+import jakarta.validation.constraints.NotBlank
 import mu.KotlinLogging
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
@@ -15,8 +17,7 @@ import org.springframework.web.bind.annotation.RequestHeader
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
-import javax.validation.Valid
-import javax.validation.constraints.NotBlank
+
 
 @RestController
 @RequestMapping("/v1/user")
